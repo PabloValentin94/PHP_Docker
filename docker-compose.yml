@@ -18,8 +18,3 @@ services:
       MYSQL_DATABASE: Personal_App
     ports:
       - "3306:3306" # Host (Máquina/Container).
-    volumes:
-      - mysql-data: /var/lib/mysql
-
-volumes:
-  mysql-data:
