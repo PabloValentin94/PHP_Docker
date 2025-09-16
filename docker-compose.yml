@@ -1,0 +1,25 @@
+version: '3.8' # Versão do template dessse arquivo.
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" # Host (Máquina/Container).
+    depends_on:
+      - mysql
+
+  mysql:
+    container_name: Personal_MySQL_Server
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: Personal_App
+    ports:
+      - "3306:3306" # Host (Máquina/Container).
+    volumes:
+      - mysql-data: /var/lib/mysql
+
+volumes:
+  mysql-data:
