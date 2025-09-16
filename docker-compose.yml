@@ -17,4 +17,4 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: Personal_App
     ports:
-      - "3306:3306" # Host (Máquina/Container).
+      - "3307:3306" # Host (Máquina/Container).

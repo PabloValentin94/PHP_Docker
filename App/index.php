@@ -5,10 +5,10 @@
 
         $connection = new PDO($dsn, "root", "root");
 
-        $test = $connection->query("Show database variables.");
+        $test = $connection->query("Show variables");
 
         while ($row = $test->fetch()) {
-            echo "<p>Name: " . $row[0] . " " . $row[1] . "</p>";
+            echo "<p>Name: " . $row[0] . " (" . $row[1] . ")</p>";
         }
     }
     catch (Exception $ex) {
